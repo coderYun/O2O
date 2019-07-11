@@ -1,0 +1,52 @@
+package com.hly.o2o.web.frontend;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.hly.o2o.entity.PersonInfo;
+import com.hly.o2o.entity.Product;
+import com.hly.o2o.service.ProductService;
+import com.hly.o2o.util.HttpServletRequestUtil;
+
+@Controller
+@RequestMapping(value="/frontend")
+public class ProductDetailController {
+	@Autowired
+	private ProductService productService;
+	
+	@RequestMapping(value="/listproductdetailpageinfo")
+	@ResponseBody
+	private Map<String,Object> ListProductDetailPageInfo(HttpServletRequest request){
+		Map<String,Object> modelMap=new HashMap<String,Object>();
+		long productId = HttpServletRequestUtil.getlong(request, "productId");
+		Product product=null;
+		//非空判断
+		if(productId!=-1){
+			try{
+				product = productService.getProductById(productId);
+				modelMap.put("product", product);
+				modelMap.put("success", true);
+				
+			}catch(Exception e){
+				modelMap.put("success", false);
+				modelMap.put("errMsg",e.getMessage());
+			}
+		}else{
+			modelMap.put("success", false);
+			modelMap.put("errMsg","productId is empty");
+		}
+		return modelMap;
+		
+	}
+	
+
+
+}

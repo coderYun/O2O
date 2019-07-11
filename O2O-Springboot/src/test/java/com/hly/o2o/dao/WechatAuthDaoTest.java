@@ -1,0 +1,49 @@
+package com.hly.o2o.dao;
+import static org.junit.Assert.assertEquals;
+import java.util.Date;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.hly.o2o.entity.PersonInfo;
+import com.hly.o2o.entity.WechatAuth;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class WechatAuthDaoTest  {
+	@Autowired
+	private WechatAuthDao wechatAuthDao;
+
+	@Test
+	public void testAInsertWechatAuth() throws Exception {
+		//新增一个微信账号
+		WechatAuth wechatAuth = new WechatAuth();
+		PersonInfo person=new PersonInfo();
+		person.setUserId(1L);
+		wechatAuth.setPersonInfo(person);
+		//任意设置一个openId
+		wechatAuth.setOpenId("dafahizhfdhaih");
+		wechatAuth.setCreateTime(new Date());
+		int effectedNum = wechatAuthDao.insertWechatAuth(wechatAuth);
+		assertEquals(1, effectedNum);
+	}
+
+	@Test
+	public void testBQueryWechatAuthByOpenId() throws Exception {
+		WechatAuth wechatAuth = wechatAuthDao.queryWechatInfoByOpenId("dafahizhfdhaih");
+		assertEquals("test", wechatAuth.getPersonInfo().getName());
+	}
+
+	/*@Test
+	public void testDeleteWechatAuth() throws Exception {
+		WechatAuth wechatAuth = wechatAuthDao
+				.queryWechatInfoByOpenId("dafahizhfdhaih");
+		int effectedNum = wechatAuthDao.deleteWechatAuth(wechatAuth
+				.getWechatAuthId());
+		assertEquals(1, effectedNum);
+	}*/
+}

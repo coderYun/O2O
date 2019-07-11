@@ -1,0 +1,4 @@
+2019-06-03 20:41:42:141[main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth] use [master] Strategy,sqlCommanType[UPDATE]
+2019-06-03 20:41:42:159[main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是master
+2019-06-03 20:53:29:672[main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-03 20:53:29:676[main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave

@@ -1,0 +1,17 @@
+package com.hly.o2o.service;
+import java.util.List;
+
+import com.hly.o2o.entity.ShopCategory;
+public interface ShopCategoryService {
+	
+	
+	public static final String SCLISTKEY = "shopcategorylist";
+
+	/**
+	 * 根据传入条件返回店铺分类列表
+	 * @param shopCategoryCondition
+	 * @return
+	 */
+	List<ShopCategory> getShopCategoryList(ShopCategory shopCategoryCondition);
+
+}

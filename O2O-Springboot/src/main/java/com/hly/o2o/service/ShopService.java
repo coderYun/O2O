@@ -1,0 +1,48 @@
+package com.hly.o2o.service;
+import java.io.File;
+import java.io.InputStream;
+
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
+import com.hly.o2o.dto.ImageHolder;
+import com.hly.o2o.dto.ShopExecution;
+import com.hly.o2o.entity.Shop;
+import com.hly.o2o.exceptions.ShopOperationException;
+
+public interface ShopService {
+	
+	/**
+	 * 查询店铺的列表
+	 * @param shopCondition
+	 * @return
+	 */
+	public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize);
+
+	
+	/**
+	 * 通过店铺ID获得店铺信息
+	 * @param shopId
+	 * @return
+	 */
+	Shop getByShopId(long shopId);
+	
+	/**
+	 * 修改店铺信息，包过对让图片的修改
+	 * @param shop
+	 * @param inputStream
+	 * @param fileName
+	 * @return
+	 * @throws ShopOperationException
+	 */
+	ShopExecution modifyShop(Shop shop, ImageHolder thumbnail)throws ShopOperationException;
+	/**
+	 * 添加店铺
+	 * @param shop
+	 * @param shopImgInputStream
+	 * @param fileName
+	 * @return
+	 * @throws ShopOperationException
+	 */
+	ShopExecution addShop(Shop shop, ImageHolder thumbnail)throws ShopOperationException;
+
+}

@@ -1,0 +1,57 @@
+2019-07-10 09:11:02:223[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 20992 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 09:11:02:264[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 09:11:08:863[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 7.292 seconds (JVM running for 13.257)
+2019-07-10 09:15:05:014[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 22392 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 09:15:05:027[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 09:15:12:956[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 9.26 seconds (JVM running for 16.254)
+2019-07-10 09:25:00:215[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 24860 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 09:25:00:223[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 09:25:06:471[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 7.347 seconds (JVM running for 11.718)
+2019-07-10 09:25:18:410[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 24084 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 09:25:18:417[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 09:25:26:150[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 8.934 seconds (JVM running for 13.59)
+2019-07-10 09:28:38:237[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 21912 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 09:28:38:271[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 09:28:46:809[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 9.457 seconds (JVM running for 16.206)
+2019-07-10 09:33:51:780[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 24020 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 09:33:51:787[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 09:33:58:359[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 7.697 seconds (JVM running for 12.191)
+2019-07-10 11:12:02:057[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 23892 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 11:12:02:064[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 11:12:09:960[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 8.656 seconds (JVM running for 13.753)
+2019-07-10 16:48:03:399[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 22312 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 16:48:03:399[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 16:48:08:429[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 5.53 seconds (JVM running for 10.87)
+2019-07-10 16:51:50:589[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 11756 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 16:51:50:589[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 16:51:55:630[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 5.916 seconds (JVM running for 9.534)
+2019-07-10 18:00:37:992[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 11716 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:00:38:032[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:00:49:318[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 14.316 seconds (JVM running for 31.623)
+2019-07-10 18:23:21:220[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 2900 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:23:21:226[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:23:26:650[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 5.968 seconds (JVM running for 12.529)
+2019-07-10 18:25:45:119[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 14004 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:25:45:126[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:25:50:891[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 6.484 seconds (JVM running for 10.371)
+2019-07-10 18:28:47:143[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 11088 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:28:47:149[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:28:52:427[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 6.013 seconds (JVM running for 11.403)
+2019-07-10 18:30:53:882[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 13144 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:30:53:889[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:30:58:830[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 5.6 seconds (JVM running for 10.06)
+2019-07-10 18:44:07:857[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 14308 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:44:07:909[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:44:13:781[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 6.57 seconds (JVM running for 9.113)
+2019-07-10 18:49:16:064[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 7616 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:49:16:072[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:49:20:739[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 5.147 seconds (JVM running for 8.863)
+2019-07-10 18:52:34:335[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 9580 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:52:34:340[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:52:40:449[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 6.789 seconds (JVM running for 13.978)
+2019-07-10 18:54:11:786[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 11296 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:54:11:793[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:54:17:712[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 6.509 seconds (JVM running for 10.274)
+2019-07-10 18:55:04:878[main] INFO  com.hly.o2o.O2oApplication-Starting O2oApplication on LAPTOP-H6PGDLDH with PID 9220 (G:\STS_workspace\target\classes started by hp in G:\STS_workspace)
+2019-07-10 18:55:04:886[main] INFO  com.hly.o2o.O2oApplication-No active profile set, falling back to default profiles: default
+2019-07-10 18:55:10:294[main] INFO  com.hly.o2o.O2oApplication-Started O2oApplication in 5.999 seconds (JVM running for 9.496)

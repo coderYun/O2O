@@ -1,0 +1,47 @@
+package com.hly.o2o.interceptor.shopadmin;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import com.hly.o2o.entity.Shop;
+
+/**
+ * 对店家管理系统操作的拦截器
+ * @author hp
+ *
+ */
+public class ShopPermissionInterceptor extends HandlerInterceptorAdapter {
+	
+	/**
+	 * 主要做事前拦截，即用户操作发生前,改写preHandle的逻辑，进行拦截
+	 */
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+		//从session中获取当前选择的店铺
+		Shop shop=(Shop) request.getSession().getAttribute("currentShop");
+		@SuppressWarnings("unchecked")
+		//从session中获取当前用户可操作的 店铺列表
+		List<Shop> shopList=(List<Shop>) request.getSession().getAttribute("shopList");
+		
+		//非空判断
+		if(shop!=null && shopList!=null){
+			//遍历可操作的店铺
+			for(Shop s:shopList){
+				//如果当前店铺在可操作的店铺列表里，则返回true
+				if(s.getShopId()==shop.getShopId()){
+					return true;
+				}
+			}
+		}
+
+		
+		//若不满足拦截器的条件则直接返回fasle
+		return false;
+	}
+
+}

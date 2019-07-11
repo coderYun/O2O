@@ -1,0 +1,83 @@
+package com.imooc.o2o.service.impl;
+
+import java.util.Date;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hly.o2o.dao.PersonInfoDao;
+import com.hly.o2o.dao.WechatAuthDao;
+import com.hly.o2o.dto.WechatAuthExecution;
+import com.hly.o2o.entity.PersonInfo;
+import com.hly.o2o.entity.WechatAuth;
+import com.hly.o2o.enums.WechatAuthStateEnum;
+import com.hly.o2o.exceptions.WechatAuthOperationException;
+import com.hly.o2o.service.WechatAuthService;
+
+@Service
+public class WechatAuthServiceImpl implements WechatAuthService {
+	private static Logger log = LoggerFactory.getLogger(WechatAuthServiceImpl.class);
+
+	@Autowired
+	private WechatAuthDao wechatAuthDao;
+	@Autowired
+	private PersonInfoDao personInfoDao;
+
+	@Override
+	public WechatAuth getWechatAuthByOpenId(String openId) {
+
+		return wechatAuthDao.queryWechatInfoByOpenId(openId);
+	}
+
+	@Override
+	@Transactional
+	public WechatAuthExecution register(WechatAuth wechatAuth) throws WechatAuthOperationException {
+		// 空值判断
+		if (wechatAuth != null && wechatAuth.getOpenId() != null) {
+			try {
+				// 设置创建时间
+				wechatAuth.setCreateTime(new Date());
+				// 如果该微信账号里有用户信息并且用户ID为空，那么认为该用户是第一次用微信登录该平台，便给他自动创建用户信息
+				if (wechatAuth.getPersonInfo() != null && wechatAuth.getPersonInfo().getUserId() == null) {
+					try {
+						// 设置创建用户时间
+						wechatAuth.getPersonInfo().setCreateTime(new Date());
+						// 设置账号状态可用
+						wechatAuth.getPersonInfo().setEnableStatus(1);
+						PersonInfo personInfo2 = wechatAuth.getPersonInfo();
+						int effectNum = personInfoDao.insertPersonInfo(personInfo2);
+						wechatAuth.setPersonInfo(personInfo2);
+						if (effectNum <= 0) {
+							throw new WechatAuthOperationException("添加用户信息失败");
+						}
+					} catch (Exception e) {
+						log.error("insert personinfo error" + e.getMessage());
+						throw new WechatAuthOperationException("insert personinfo error" + e.getMessage());
+
+					}
+				}
+				// 创建专属于本平台的微信账号
+				int effectNum = wechatAuthDao.insertWechatAuth(wechatAuth);
+				// 插入失败
+				if (effectNum <= 0) {
+					throw new WechatAuthOperationException("账号创建失败");
+
+				} else {// 插入成功
+					return new WechatAuthExecution(WechatAuthStateEnum.SUCCESS, wechatAuth);
+				}
+
+			} catch (Exception e) {
+				log.error("insertWechatAuth error" + e.toString());
+				throw new WechatAuthOperationException("insertWechatAuth error" + e.getMessage());
+			}
+
+		} else {
+			return new WechatAuthExecution(WechatAuthStateEnum.NULL_AUTH_INFO);
+		}
+
+	}
+
+}

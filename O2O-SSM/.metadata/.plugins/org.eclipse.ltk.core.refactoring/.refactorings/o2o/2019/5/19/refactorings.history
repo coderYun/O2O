@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.imooc.o2o.web.frontend.frontendController&apos; to &apos;FrontendController&apos;&#x0D;&#x0A;- Original project: &apos;o2o&apos;&#x0D;&#x0A;- Original element: &apos;com.imooc.o2o.web.frontend.frontendController&apos;&#x0D;&#x0A;- Renamed element: &apos;com.imooc.o2o.web.frontend.FrontendController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;frontendController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.imooc.o2o.web.frontend{frontendController.java[frontendController" matchStrategy="1" name="FrontendController" qualified="false" references="true" similarDeclarations="false" stamp="1557063676755" textual="false" version="1.0"/>
+</session>

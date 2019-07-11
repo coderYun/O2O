@@ -1,0 +1,67 @@
+package com.hly.o2o.service;
+
+import static org.junit.Assert.*;
+
+import java.util.Date;
+
+import org.junit.FixMethodOrder;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.hly.o2o.BaseTest;
+import com.hly.o2o.dto.LocalAuthExecution;
+import com.hly.o2o.entity.LocalAuth;
+import com.hly.o2o.entity.PersonInfo;
+import com.hly.o2o.enums.LocalAuthStateEnum;
+import com.hly.o2o.service.LocalAuthService;
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class LocalAuthServiceTest extends BaseTest{
+	@Autowired
+	private LocalAuthService localAuthService;
+	
+	@Test
+	
+	public void testABindLocalAuth(){
+		//新增一条平台账号
+		LocalAuth localAuth=new LocalAuth();
+		PersonInfo personInfo=new PersonInfo();
+		personInfo.setUserId(1L);
+		localAuth.setCreateTime(new Date());
+		localAuth.setUsername("testusername");
+		localAuth.setPassword("testpassword");
+		//给平台账号设置用户，与那个用户绑定
+		localAuth.setPersonInfo(personInfo);
+		
+		//绑定账号
+		LocalAuthExecution lae = localAuthService.bindLocalAuhth(localAuth);
+		assertEquals(LocalAuthStateEnum.SUUCESS.getState(),lae.getState());
+		
+		//通过userId查询平台用户信息，看看是否和预期的一样
+		LocalAuth auth = localAuthService.getLocalAuthByUserId(personInfo.getUserId());
+		System.out.println("用户名为=============="+auth.getPersonInfo().getName());
+		System.out.println("密码为================"+auth.getPassword());
+		
+		
+		
+	}
+	
+	@Test
+	public void testBUpdate(){
+		//设置账号信息
+		long userId=1;
+		String username="test";
+		String password="test";
+		String newPassword="123456";
+		LocalAuthExecution lae = localAuthService.modifyLocalAuth(userId, username, password, newPassword);
+		assertEquals(LocalAuthStateEnum.SUUCESS.getState(),lae.getState());
+		//通过账号密码查询相应的平台账号信息
+		LocalAuth localAuthByUserNameAndPwd = localAuthService.getLocalAuthByUserNameAndPwd(username,newPassword);
+		System.out.println("新密码========"+localAuthByUserNameAndPwd.getPassword());
+		System.out.println("用户名========"+localAuthByUserNameAndPwd.getPersonInfo().getName());
+	}
+	
+	
+
+}

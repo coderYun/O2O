@@ -1,0 +1,56 @@
+2019-06-05 08:43:49:088[http-nio-8080-exec-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:49:111[http-nio-8080-exec-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:50:094[http-nio-8080-exec-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:50:097[http-nio-8080-exec-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:52:551[http-nio-8080-exec-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:52:555[http-nio-8080-exec-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:52:567[http-nio-8080-exec-8] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:52:567[http-nio-8080-exec-8] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:52:692[http-nio-8080-exec-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:52:692[http-nio-8080-exec-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:52:705[http-nio-8080-exec-8] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:52:705[http-nio-8080-exec-8] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:54:710[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:54:710[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:54:823[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:54:823[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:56:913[http-nio-8080-exec-8] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductById] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:56:915[http-nio-8080-exec-8] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:59:338[http-nio-8080-exec-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:59:340[http-nio-8080-exec-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:59:342[http-nio-8080-exec-7] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:59:343[http-nio-8080-exec-7] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:59:491[http-nio-8080-exec-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:59:491[http-nio-8080-exec-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:43:59:494[http-nio-8080-exec-7] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:43:59:494[http-nio-8080-exec-7] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:01:393[http-nio-8080-exec-7] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:01:393[http-nio-8080-exec-7] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:01:464[http-nio-8080-exec-7] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:01:464[http-nio-8080-exec-7] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:03:464[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:03:465[http-nio-8080-exec-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:03:465[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:03:465[http-nio-8080-exec-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:03:590[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:03:591[http-nio-8080-exec-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:03:591[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:03:591[http-nio-8080-exec-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:04:919[http-nio-8080-exec-10] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:04:919[http-nio-8080-exec-10] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:05:007[http-nio-8080-exec-10] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:05:007[http-nio-8080-exec-10] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:06:689[http-nio-8080-exec-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductById] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:06:689[http-nio-8080-exec-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:10:902[http-nio-8080-exec-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:10:902[http-nio-8080-exec-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:10:907[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:10:907[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:10:978[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:10:978[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:10:994[http-nio-8080-exec-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:10:994[http-nio-8080-exec-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:13:625[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:13:625[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave
+2019-06-05 08:44:13:694[http-nio-8080-exec-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor-设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy,sqlCommanType[SELECT]
+2019-06-05 08:44:13:695[http-nio-8080-exec-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder-所使用的数据源是slave

@@ -1,0 +1,8 @@
+2019-06-05 17:04:11:838[main] ERROR com.hly.o2o.service.impl.WechatAuthServiceImpl-insertWechatAuth errororg.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'hly' for key 'open_id'
+### The error may exist in file [G:\STS_workspace\target\classes\mapper\WechatAuthDao.xml]
+### The error may involve com.hly.o2o.dao.WechatAuthDao.insertWechatAuth-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO tb_wechat_auth(user_id,open_id,create_time)   VALUES(?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'hly' for key 'open_id'
+; Duplicate entry 'hly' for key 'open_id'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'hly' for key 'open_id'

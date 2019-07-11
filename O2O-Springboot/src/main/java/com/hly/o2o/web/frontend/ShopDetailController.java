@@ -1,0 +1,144 @@
+package com.hly.o2o.web.frontend;
+
+import com.hly.o2o.dto.ProductExecution;
+import com.hly.o2o.entity.Product;
+import com.hly.o2o.entity.ProductCategory;
+import com.hly.o2o.entity.Shop;
+import com.hly.o2o.service.ProductCategoryService;
+import com.hly.o2o.service.ProductService;
+import com.hly.o2o.service.ShopService;
+import com.hly.o2o.util.HttpServletRequestUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Controller
+@RequestMapping("/frontend")
+public class ShopDetailController {
+	@Autowired
+	private ShopService shopService;
+	@Autowired
+	private ProductService productService;
+	@Autowired
+	private ProductCategoryService productCategoryService;
+
+	@RequestMapping(value = "/listshopdetailpageinfo", method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String, Object> listShopDetailPageInfo(HttpServletRequest request) {
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		// 获取前台传过来的shopId
+		long shopId = HttpServletRequestUtil.getlong(request, "shopId");
+		Shop shop = null;
+		List<ProductCategory> productCategoryList;
+
+		// 非空判断
+		if (shopId > -1L) {
+			try {
+				// 获取店铺ID为shopID的店铺信息
+				shop = shopService.getByShopId(shopId);
+
+				// 获取该店铺下面的商品类别列表
+				productCategoryList = productCategoryService.getProductCategoryList(shopId);
+				modelMap.put("shop", shop);
+				modelMap.put("productCategoryList", productCategoryList);
+				modelMap.put("success", true);
+
+			} catch (Exception e) {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.getMessage());
+
+			}
+
+		} else {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "shopId is empty");
+		}
+		return modelMap;
+
+	}
+
+	/**
+	 * 依据查询条件分页列出该店铺下的所以商品
+	 * 
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/listproductsbyshop", method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String, Object> listProductsByShop(HttpServletRequest request) {
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		// 获取页码
+		int pageIndex = HttpServletRequestUtil.getInt(request, "pageIndex");
+		// 获取一页最多显示多少条
+		int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
+
+		// 获取店铺shopId
+		long shopId = HttpServletRequestUtil.getlong(request, "shopId");
+
+		// 非空判断
+		if ((pageIndex > -1) && (pageSize > -1) && (shopId > -1L)) {
+			try {
+				// 获取商品类别ID
+				long productCategoryId = HttpServletRequestUtil.getlong(request, "productCategoryId");
+				// 尝试获取需要模糊查询的商品名
+				String productName = HttpServletRequestUtil.getString(request, "productName");
+				// 组合查询条件
+				Product productCondition = compactProductCondition4Search(shopId, productCategoryId, productName);
+
+				ProductExecution pe = productService.getProductList(productCondition, pageIndex, pageSize);
+				modelMap.put("productList", pe.getProductList());
+				modelMap.put("count", pe.getCount());
+				modelMap.put("success", true);
+			} catch (Exception e) {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.getMessage());
+			}
+
+		} else {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "pageIndex or pageSize or shopId is empty");
+		}
+		return modelMap;
+
+	}
+
+	/**
+	 * 组合查询条件，并且将拼接好的查询条件封装到productCondition里并返回
+	 * 
+	 * @param shopId
+	 * @param productCategoryId
+	 * @param productName
+	 * @return
+	 */
+
+	private Product compactProductCondition4Search(long shopId, long productCategoryId, String productName) {
+		Product productCondition = new Product();
+		Shop shop = new Shop();
+		// 首先要明确是查询那个店铺下面的商品信息
+		shop.setShopId(shopId);
+		productCondition.setShop(shop);
+		// 非空判断
+		if (productCategoryId != -1L) {
+			// 查询某个店铺下的商品列表
+			ProductCategory productCategory = new ProductCategory();
+			productCategory.setProductCategoryId(productCategoryId);
+			productCondition.setProductCategory(productCategory);
+		}
+
+		if (productName != null) {
+			// 按照名字了包含productName的查询条件查询
+			productCondition.setProductName(productName);
+		}
+		// 只允许状态为已上架的商品
+		productCondition.setEnableStatus(1);
+		return productCondition;
+	}
+
+}
